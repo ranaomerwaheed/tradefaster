@@ -70,6 +70,85 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 
     <style>
+
+ @font-face {
+            font-family: 'Jameel Noori Nastaleeq';
+            src: url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
+        }
+        
+        .banner-container {
+            position: relative;
+            width: 1200px;
+            height: 120px;
+            margin: 0 auto;
+            overflow: hidden;
+            background: linear-gradient(to right, #01411C, #046A38);
+        }
+        
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            z-index: 10;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            white-space: nowrap;
+        }
+        
+        .text h1 {
+            font-size: 26px;
+            margin: 0;
+            display: inline-block;
+            padding: 0 15px;
+        }
+        
+        .urdu-text {
+            font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
+            font-size: 28px;
+        }
+        
+        .english-text {
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .text p {
+            font-size: 16px;
+            margin: 5px 0 0;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .glass-effect {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(3px);
+            transform: skewX(-20deg);
+            animation: fog 5s infinite;
+            z-index: 5;
+        }
+        
+        @keyframes fog {
+            0% { left: -100%; }
+            50% { left: 150%; }
+            100% { left: -100%; }
+        }
+        
+        .flag-gif {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            width: 160px;
+            height: 100px;
+            z-index: 2;
+            object-fit: contain;
+        }
+        
         :root {
             --primary: #6a11cb; /* Vibrant Purple */
             --secondary: #2575fc; /* Bright Blue */
@@ -1241,9 +1320,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </noscript>
 <!-- End Facebook Pixel Code -->
 
+    <!-- Loading Urdu font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
+<div class="banner-container">
+        <!-- Pakistan Flag GIF -->
+        <img class="flag-gif" src="https://i.postimg.cc/gJBrvRTy/Pakistan-l.gif" alt="Pakistan Flag">
+        
+        <!-- Text with Urdu font -->
+        <div class="text">
+            <h1><span class="urdu-text">یوم آزادی مبارک</span> <span class="english-text">| Happy Independence Day</span></h1>
+            <p>14 August - Pakistan</p>
+        </div>
+        
+        <!-- Foggy glass effect -->
+        <div class="glass-effect"></div>
+    </div>
+    
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLNZS247"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
