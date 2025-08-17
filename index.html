@@ -1326,19 +1326,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 
-<div class="banner-container">
-        <!-- Pakistan Flag GIF -->
-        <img class="flag-gif" src="https://i.postimg.cc/gJBrvRTy/Pakistan-l.gif" alt="Pakistan Flag">
-        
-        <!-- Text with Urdu font -->
-        <div class="text">
-            <h1><span class="urdu-text">یوم آزادی مبارک</span> <span class="english-text">| Happy Independence Day</span></h1>
-            <p>14 August - Pakistan</p>
-        </div>
-        
-        <!-- Foggy glass effect -->
-        <div class="glass-effect"></div>
-    </div>
+
     
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLNZS247"
@@ -3312,58 +3300,7 @@ Gulgasht Colony </p>
             });
         });
     </script>
-    <!-- Music Player -->
-        <audio id="patrioticSong" loop>
-            <source src="https://raw.githubusercontent.com/ranaomerwaheed/tradefaster/main/Pakistan%20Zindabad%20Sahir%20Ali%20Bagga.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="music-control">
-            <span class="music-icon">♫</span>
-            <span>Pakistan Zindabad</span>
-        </div>
-    </div>
-
-    <script>
-        const audio = document.getElementById('patrioticSong');
-        const banner = document.getElementById('banner');
-        const overlay = document.getElementById('overlay');
-        
-        // Set volume to 70%
-        audio.volume = 0.7;
-        
-        // Make entire banner clickable for audio play
-        banner.addEventListener('click', function() {
-            // Hide overlay
-            overlay.style.display = 'none';
-            
-            // Try to play audio
-            audio.play()
-                .then(() => {
-                    console.log('Audio playback started successfully');
-                })
-                .catch(error => {
-                    console.error('Audio playback failed:', error);
-                    overlay.textContent = 'Browser blocked audio. Please click again or enable autoplay.';
-                    overlay.style.display = 'flex';
-                });
-        });
-        
-        // Try muted autoplay first (works in some browsers)
-        window.addEventListener('load', function() {
-            audio.muted = true;
-            audio.play()
-                .then(() => {
-                    // Success - unmute after playback starts
-                    setTimeout(() => {
-                        audio.muted = false;
-                        overlay.style.display = 'none';
-                    }, 500);
-                })
-                .catch(error => {
-                    console.log('Muted autoplay prevented, waiting for user interaction');
-                });
-        });
-    </script>
-    
+ 
+  
 </body>
 </html>
