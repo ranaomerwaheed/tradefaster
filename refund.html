@@ -7,17 +7,20 @@
   <meta name="description" content="Refund Policy for tradeFaster" />
   <style>
     :root{
-      --bg:#071025; --muted:#9aa4b2; --accent:#00b8ff; --maxw:1080px;
+      --bg:#F5F5F5;
+      --muted:#777777;
+      --accent:#00b8ff;
+      --maxw:1080px;
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color-scheme: dark;
+      color-scheme: light;
     }
-    body{margin:0; background:linear-gradient(180deg,#071025,#071623); color:#e6eef6; line-height:1.5}
+    body{margin:0; background:var(--bg); color:#333333; line-height:1.5}
     a{color:var(--accent); text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:var(--maxw); margin:0 auto; padding:0 24px}
 
     /* header */
-    header{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); backdrop-filter:blur(6px); border-bottom:1px solid rgba(255,255,255,0.05); position:sticky; top:0; z-index:20}
+    header{background:rgba(255,255,255,0.8); backdrop-filter:blur(6px); border-bottom:1px solid #dddddd; position:sticky; top:0; z-index:20}
     .nav{display:flex; justify-content:space-between; align-items:center; padding:16px 0}
     .brand{display:flex; align-items:center; gap:12px}
     .logo-img{width:44px; height:44px; object-fit:contain}
@@ -30,7 +33,7 @@
     h2{margin-top:28px; margin-bottom:8px}
 
     /* footer */
-    footer{border-top:1px solid rgba(255,255,255,0.05); margin-top:32px; padding:28px 24px; background:linear-gradient(0deg, rgba(255,255,255,0.01), transparent)}
+    footer{border-top:1px solid #dddddd; margin-top:32px; padding:28px 24px; background:#F8F8F8}
     .footer-grid{max-width:var(--maxw); margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:24px}
     .footer-left{min-width:220px}
     .muted{color:var(--muted)}
@@ -46,7 +49,7 @@
       0%,100% { transform: translateY(0); }
       50% { transform: translateY(-5px); }
     }
-    .email-icon:hover i { color:#fff; }
+    .email-icon:hover i { color:#000; }
 
     /* Floating WhatsApp Button */
     .whatsapp-btn {
@@ -74,8 +77,8 @@
   margin-top: 25px;
   padding: 15px;
   text-align: center;
-  background: rgba(255,255,255,0.05); /* light overlay */
-  backdrop-filter: blur(8px);         /* foggy / glass effect */
+  background: #F0F0F0;
+  border: 1px solid #e0e0e0;
   border-radius: 10px;
 }
 .payment-methods small {
@@ -89,24 +92,23 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; 
-  gap: 24px; /* more space between logos */
+  gap: 24px;
 }
 .payment-logos img {
-  max-height: 42px;   /* bigger logo height */
-  max-width: 120px;   /* bigger logo width */
+  max-height: 42px;
+  max-width: 120px;
   height: auto;
   width: auto;
   object-fit: contain;
   transition: transform 0.2s ease;
 }
 .payment-logos img:hover {
-  transform: scale(1.1); /* small zoom effect on hover */
+  transform: scale(1.1);
 }
 
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="container nav">
       <div class="brand">
@@ -130,7 +132,6 @@
     </div>
   </header>
 
-  <!-- Main -->
   <main class="container">
     <h1>Refund Policy</h1>
     <p>Effective Date: <strong>[Insert Date]</strong></p>
@@ -159,7 +160,6 @@
     <p>We reserve the right to modify this Refund Policy at any time. Updates will be posted on this page with a revised effective date.</p>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-grid">
       <div class="footer-left">
@@ -167,7 +167,7 @@
         <div style="margin-top:8px">
           <strong>tradeFaster</strong><br />
           <small class="muted">Trade smarter, move faster.</small><br />
-          <small style="color:#ff4d4d"><b>No Scammer</b></small>
+          <small style="color:#CC0000"><b>No Scammer</b></small>
         </div>
       </div>
       <div>
@@ -192,7 +192,6 @@
       <small class="muted"></small>
     </div>
   </footer>
-<!-- Payment Methods -->
 <div class="payment-methods">
   <small class="muted">We Accept</small>
   <div class="payment-logos">
@@ -206,12 +205,10 @@
   </div>
 </div>
 
-  <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/923001234567" target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 </body>
